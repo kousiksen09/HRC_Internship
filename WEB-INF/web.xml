@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Summer_Internship_Backend</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+   
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+   <filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <init-param>
+      <param-name>cors.allowed.origins</param-name>
+      <param-value>http://localhost:3000</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+
+  <servlet>
+    <servlet-name>ShowServlet</servlet-name>
+    <servlet-class>com.customerInvoice.ShowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowServlet</servlet-name>
+    <url-pattern>/showservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.customerInvoice.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/searchservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>DialogflowServlet</servlet-name>
+    <servlet-class>com.customerInvoice.DialogflowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DialogflowServlet</servlet-name>
+    <url-pattern>/dialogflowservlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>CountServlet</servlet-name>
+    <servlet-class>com.customerInvoice.CountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountServlet</servlet-name>
+    <url-pattern>/countservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>ProfileServlet</servlet-name>
+    <servlet-class>com.customerInvoice.ProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileServlet</servlet-name>
+    <url-pattern>/profileservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+   <servlet>
+    <servlet-name>ModifyTable</servlet-name>
+    <servlet-class>com.customerInvoice.ModifyTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifyTable</servlet-name>
+    <url-pattern>/modifytable</url-pattern>
+  </servlet-mapping>
+   
+</web-app>
